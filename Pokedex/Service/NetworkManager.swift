@@ -78,7 +78,6 @@ final class NetworkManager {
             } catch {
                 completion(.failure(NetworkError.decodeError("\(error)")))
             }
-            
         }.resume()
     }
     
@@ -105,7 +104,6 @@ final class NetworkManager {
             }
             
             completion(.success(data))
-            
         }.resume()
     }
     

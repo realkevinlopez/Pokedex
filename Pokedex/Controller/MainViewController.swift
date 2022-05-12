@@ -21,14 +21,14 @@ class MainViewController: UIViewController {
         tableview.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseId)
         return tableview
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupUI()
+        self.setUpUI()
         self.fetchPokemonData()
     }
-
-    private func setupUI() {
+    
+    private func setUpUI() {
         self.view.backgroundColor = .black
         self.view.addSubview(self.pokemonTableView)
         
@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
                 if (self.nextPokemon < 150){
                     self.pokemon.append(contentsOf: fetchedPokemon.results)
                 }
-
+                
                 if (self.nextPokemon >= 150){
                     self.pokemon.append(contentsOf: fetchedPokemon.results)
                     self.pokemon.removeSubrange(151...self.pokemon.count - 1)

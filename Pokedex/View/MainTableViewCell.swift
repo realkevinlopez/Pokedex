@@ -8,7 +8,7 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
-
+    
     static let reuseId = "\(MainTableViewCell.self)"
     
     var imageURL : String?
@@ -21,7 +21,7 @@ class MainTableViewCell: UITableViewCell {
         label.backgroundColor = .systemGray
         label.textColor = .black
         label.font = label.font.withSize(24)
-//        label.textAlignment = .center
+        //        label.textAlignment = .center
         return label
     }()
     
@@ -33,7 +33,7 @@ class MainTableViewCell: UITableViewCell {
         label.backgroundColor = .black
         label.textColor = .white
         label.font = label.font.withSize(18)
-//        label.textAlignment = .center
+        //        label.textAlignment = .center
         return label
     }()
     
@@ -64,13 +64,13 @@ class MainTableViewCell: UITableViewCell {
         let vStackLeft = UIStackView(frame: .zero)
         vStackLeft.translatesAutoresizingMaskIntoConstraints = false
         vStackLeft.axis = .vertical
-//        vStackLeft.spacing = 8
+        //        vStackLeft.spacing = 8
         
         let topBuffer = UIView(resistancePriority: .defaultLow, huggingPriority: .defaultLow)
         let bottomBuffer = UIView(resistancePriority: .defaultLow, huggingPriority: .defaultLow)
-
+        
         vStackLeft.addArrangedSubview(topBuffer)
-//        vStackLeft.addArrangedSubview(self.nameLabel)
+        //        vStackLeft.addArrangedSubview(self.nameLabel)
         vStackLeft.addArrangedSubview(self.spriteImageView)
         vStackLeft.addArrangedSubview(bottomBuffer)
         
@@ -98,7 +98,7 @@ class MainTableViewCell: UITableViewCell {
         hStack.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8).isActive = true
         hStack.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8).isActive = true
         hStack.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8).isActive = true
-
+        
         self.spriteImageView.heightAnchor.constraint(equalToConstant: 140).isActive = true
         self.spriteImageView.widthAnchor.constraint(equalToConstant: 140).isActive = true
         
